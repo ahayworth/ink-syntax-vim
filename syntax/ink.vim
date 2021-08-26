@@ -4,7 +4,9 @@ endif
 
 "syntax keyword inkOperator and not or && ||
 "syntax keyword inkCast INT FLOOR FLOAT
-"
+
+syntax region inkGlobalVar start="^VAR\s" end="$"
+
 syntax keyword inkPreProc INCLUDE EXTERNAL
 syntax keyword inkDoneEnd contained DONE END
 
@@ -65,6 +67,7 @@ highlight default link inkDivert Special
 highlight default link inkDoneEnd Statement
 highlight default link inkGlue Special
 
+highlight default link inkGlobalVar Identifier
 highlight default link inkKnot Identifier
 highlight default link inkStitch Identifier
 
